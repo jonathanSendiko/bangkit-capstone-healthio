@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.healthio.ui.home.HomeFragment"
+        android:name="com.example.healthio.ui.main.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="com.example.healthio.ui.history.HistoryFragment"
+        android:name="com.example.healthio.ui.main.history.HistoryFragment"
         android:label="History"
         tools:layout="@layout/fragment_history" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.healthio.ui.profile.ProfileFragment"
+        android:name="com.example.healthio.ui.main.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
