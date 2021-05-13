@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "110335627867",
+    "firebase_url": "https://healthio-bangkit-default-rtdb.firebaseio.com",
+    "project_id": "healthio-bangkit",
+    "storage_bucket": "healthio-bangkit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110335627867:android:f34faed627d3d3e1bea57e",
+        "android_client_info": {
+          "package_name": "com.panikga.healthio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110335627867-65vm2uji7qkcodh67l849k1912gtre61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmoqTnFSdQbXIPRAciBJErng0Q64gi3T4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110335627867-65vm2uji7qkcodh67l849k1912gtre61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
