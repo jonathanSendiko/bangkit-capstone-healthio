@@ -12,6 +12,11 @@
     <color name="hint">#B3B3C7</color>
     <color name="blue">#D5DFF2</color>
     <color name="blueaccent">#80A6F2</color>
+    <color name="deepBlue">#3286CE</color>
+    <color name="blueBg">#B3DBFF</color>
+    <color name="edit">#F6C643</color>
 
+    <color name="whiteGrey">#E2E3ED</color>
+    <color name="green">#189A7C</color>
     <color name="grey">#8D92A3</color>
 </resources>
