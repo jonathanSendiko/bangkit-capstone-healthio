@@ -58,13 +58,12 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Email"
-        android:textColorHint="@color/grey"
         android:inputType="textEmailAddress"
         android:padding="16dp"
+        android:textColorHint="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputName"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -78,9 +77,9 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Password"
-        android:textColorHint="@color/grey"
         android:inputType="textPassword"
         android:padding="16dp"
+        android:textColorHint="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
@@ -97,9 +96,9 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Confirm Password"
-        android:textColorHint="@color/grey"
         android:inputType="textPassword"
         android:padding="16dp"
+        android:textColorHint="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
@@ -119,7 +118,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
-
 
     <TextView
         android:id="@+id/btnLogin"
