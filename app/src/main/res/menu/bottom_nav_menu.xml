@@ -5,21 +5,21 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
         android:title="Home"
-        app:cnb_backgroundColor="#fff"
-        app:cnb_iconColor="#000"
-        app:cnb_textColor="#000" />
+        app:cnb_backgroundColor="#B3DBFF"
+        app:cnb_iconColor="#3286CE"
+        app:cnb_textColor="#3286CE" />
     <item
         android:id="@+id/navigation_history"
-        android:icon="@drawable/ic_history"
-        android:title="History"
-        app:cnb_backgroundColor="#fff"
-        app:cnb_iconColor="#000"
-        app:cnb_textColor="#000" />
+        android:icon="@drawable/ic_agenda"
+        android:title="Agenda"
+        app:cnb_backgroundColor="#B7E7DC"
+        app:cnb_iconColor="#189A7C"
+        app:cnb_textColor="#189A7C" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_profile"
+        android:icon="@drawable/ic_person"
         android:title="Profile"
-        app:cnb_backgroundColor="#fff"
-        app:cnb_iconColor="#000"
-        app:cnb_textColor="#000" />
+        app:cnb_backgroundColor="#F4D8B7"
+        app:cnb_iconColor="#BD7D32"
+        app:cnb_textColor="#BD7D32" />
 </menu>
