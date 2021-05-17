@@ -23,7 +23,7 @@ class ProfileFragment : Fragment() {
         profileViewModel =
             ViewModelProvider(this).get(ProfileViewModel::class.java)
         profileViewModel.text.observe(viewLifecycleOwner, Observer {
-            binding.textNotifications.text = it
+//            binding.textNotifications.text = it
         })
         return binding.root
     }

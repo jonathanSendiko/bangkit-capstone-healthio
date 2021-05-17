@@ -22,9 +22,9 @@ class HistoryFragment : Fragment() {
 
         historyViewModel = ViewModelProvider(this).get(HistoryViewModel::class.java)
 
-        historyViewModel.text.observe(
-            viewLifecycleOwner,
-            Observer { binding.textDashboard.text = it })
+        historyViewModel.text.observe(viewLifecycleOwner, Observer {
+//            binding.textDashboard.text = it
+        })
         return binding.root
     }
 }
