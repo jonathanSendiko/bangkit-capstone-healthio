@@ -10,11 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
-        <activity android:name=".ui.onboarding.OnboardingActivity"></activity>
+        <activity android:name=".ui.onboarding.OnboardingActivity" />
         <activity android:name=".ui.authentication.forgotpassword.ForgotPasswordActivity" />
         <activity android:name=".ui.authentication.signup.SignupActivity" />
         <activity android:name=".ui.authentication.login.LoginActivity" />
-        <activity android:name=".ui.splashscreen.SplashScreenActivity">
+        <activity android:name=".ui.splashscreen.SplashScreenActivity" />
+        <activity android:name=".ui.seeall.SeeallActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
