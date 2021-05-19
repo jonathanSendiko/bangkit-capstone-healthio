@@ -28,12 +28,12 @@ class ListHospitalAdapter(private val listHospital: ArrayList<Hospital>): Recycl
         val hospital = listHospital[position]
         holder.name.text = hospital.nama
         holder.alamat.text = hospital.alamat
-        holder.lat.text = hospital.lat
-        holder.lon.text = hospital.long
+//        holder.lat.text = hospital.lat
+//        holder.lon.text = hospital.long
         holder.ratingAvg.text = hospital.rating_avg
         holder.ratingCount.text = hospital.rating_count
-        holder.kelas.text = hospital.kelas
-        holder.jenis.text = hospital.jenis
+//        holder.kelas.text = hospital.kelas
+//        holder.jenis.text = hospital.jenis
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listHospital[holder.adapterPosition])
         }
@@ -42,12 +42,12 @@ class ListHospitalAdapter(private val listHospital: ArrayList<Hospital>): Recycl
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var name: TextView = itemView.findViewById(R.id.nama)
         var alamat: TextView = itemView.findViewById(R.id.alamat)
-        var lat: TextView = itemView.findViewById(R.id.lat)
-        var lon: TextView = itemView.findViewById(R.id.lon)
+//        var lat: TextView = itemView.findViewById(R.id.lat)
+//        var lon: TextView = itemView.findViewById(R.id.lon)
         var ratingAvg: TextView = itemView.findViewById(R.id.rating_avg)
         var ratingCount: TextView = itemView.findViewById(R.id.rating_count)
-        var kelas: TextView = itemView.findViewById(R.id.kelas)
-        var jenis: TextView = itemView.findViewById(R.id.jenis)
+//        var kelas: TextView = itemView.findViewById(R.id.kelas)
+//        var jenis: TextView = itemView.findViewById(R.id.jenis)
     }
 
     interface OnItemClickCallback {

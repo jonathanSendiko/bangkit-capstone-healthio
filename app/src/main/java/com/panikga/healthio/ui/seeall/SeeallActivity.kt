@@ -26,7 +26,8 @@ class SeeallActivity: AppCompatActivity() {
     }
 
     private fun addHospital(list: ArrayList<Hospital>){
-        val queryRef = myRef.child("rumahsakit").orderByChild("score").limitToLast(3)
+        // LIMIT X BERARTI NAMPILIN X RS
+        val queryRef = myRef.child("rumahsakit").orderByChild("score").limitToLast(5)
 
         queryRef.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onCancelled(error: DatabaseError) {}

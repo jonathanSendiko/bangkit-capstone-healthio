@@ -1,50 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="6dp">
+    android:padding="10dp"
+    android:paddingEnd="12dp"
+    android:elevation="4dp"
+    android:background="@drawable/border_shadow"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="15dp">
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/doctor_sample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nama"
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="nama" />
+        android:text="Murni Teguh Memorial Hospital"
+        app:layout_constraintStart_toEndOf="@id/foto"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/ic_bintang"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toEndOf="@+id/foto"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="6dp" />
+    <ImageView
+        android:id="@+id/ic_bintang2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toEndOf="@+id/ic_bintang"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="6dp" />
+    <ImageView
+        android:id="@+id/ic_bintang3"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toEndOf="@+id/ic_bintang2"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="6dp" />
+    <ImageView
+        android:id="@+id/ic_bintang4"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toEndOf="@+id/ic_bintang3"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="6dp" />
+
+    <ImageView
+        android:id="@+id/ic_bintang5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toEndOf="@+id/ic_bintang4"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="6dp"
+        app:tint="@color/grey" />
+
+    <ImageView
+        android:id="@+id/ic_location"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toEndOf="@id/foto"
+        app:layout_constraintTop_toBottomOf="@id/ic_bintang"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp" />
+
+
     <TextView
         android:id="@+id/alamat"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="alamat" />
-    <TextView
-        android:id="@+id/lat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="latitude" />
-    <TextView
-        android:id="@+id/lon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="longitude" />
+        android:text="Jl. Jawa No.2, Gg. Buntu, Kec. Medan Tim., Kota Medan, Sumatera Utara 20231"
+        app:layout_constraintStart_toEndOf="@id/ic_location"
+        app:layout_constraintTop_toBottomOf="@id/ic_bintang"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/lat"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="latitude" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/lon"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="longitude" />-->
+
     <TextView
         android:id="@+id/rating_avg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rating_avg" />
+        android:text="4.6"
+        app:layout_constraintEnd_toStartOf="@id/bintang_hitam"
+        app:layout_constraintTop_toBottomOf="@id/nama"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="2dp" />
+
     <TextView
         android:id="@+id/rating_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rating_count" />
-    <TextView
-        android:id="@+id/kelas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="kelas" />
-    <TextView
-        android:id="@+id/jenis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jenis" />
+        android:text="1244"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/nama"
+        android:layout_marginTop="6dp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/garis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/rating_count"
+        app:layout_constraintTop_toBottomOf="@id/nama"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="3dp"
+        android:text="|"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/bintang_hitam"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintEnd_toStartOf="@id/garis"
+        app:layout_constraintTop_toBottomOf="@id/nama"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="3dp"
+        android:src="@drawable/ic_star"
+        app:tint="@color/grey" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/kelas"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="kelas" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/jenis"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="jenis" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
