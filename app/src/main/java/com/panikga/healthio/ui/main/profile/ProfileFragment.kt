@@ -5,14 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.R
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.panikga.healthio.databinding.FragmentProfileBinding
 import com.panikga.healthio.ui.authentication.login.LoginActivity
 import org.jetbrains.anko.noButton
@@ -39,10 +42,32 @@ class ProfileFragment : Fragment(), View.OnClickListener {
             .requestIdToken("110335627867-65vm2uji7qkcodh67l849k1912gtre61.apps.googleusercontent.com")
             .requestEmail()
             .build()
+        val acct = GoogleSignIn.getLastSignedInAccount(activity)
 
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
         auth = FirebaseAuth.getInstance()
+        if (acct != null) {
+            binding.name.text = acct.displayName
+            binding.email.text = acct.email
+        } else {
+            // Write a message to the database
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.reference
+            // Read from the database
+            myRef.child("Users")
+                .addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        binding.name.text =
+                            dataSnapshot.child("${FirebaseAuth.getInstance().currentUser!!.uid}/name").value.toString()
+                        binding.email.text = FirebaseAuth.getInstance().currentUser!!.email
+                    }
 
+                    override fun onCancelled(error: DatabaseError) {
+                        // Failed to read value
+                        Toast.makeText(activity, "failed", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        }
         binding.btnLogout.setOnClickListener(this)
 //        profileViewModel.text.observe(viewLifecycleOwner, Observer {
 //            binding.textNotifications.text = it
@@ -51,10 +76,10 @@ class ProfileFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v) {
+        when (v) {
             binding.btnLogout -> {
-                alert("Are you sure want to logout?"){
-                    noButton {  }
+                alert("Are you sure want to logout?") {
+                    noButton { }
                     yesButton {
                         auth.signOut()
                         googleSignInClient.signOut()
