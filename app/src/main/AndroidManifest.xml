@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.panikga.healthio">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
+
+        <activity android:name=".ui.main.hospital.HospitalListActivity"></activity>
+        <activity android:name=".ui.main.hospital.MainActivity" />
+        <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" />
         <activity android:name=".ui.onboarding.OnboardingActivity" />
         <activity android:name=".ui.authentication.forgotpassword.ForgotPasswordActivity" />
         <activity android:name=".ui.authentication.signup.SignupActivity" />
