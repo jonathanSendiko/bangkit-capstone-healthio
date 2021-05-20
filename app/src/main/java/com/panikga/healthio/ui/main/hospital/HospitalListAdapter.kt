@@ -27,10 +27,10 @@ class HospitalListAdapter(private val listHospital: ArrayList<Hospital>) : Recyc
     inner class HospitalListHolder(private val binding: ItemHospitalBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(hospital: Hospital){
             with(binding){
-                tvHospitalName.text = hospital.hospitalName
-                tvCategory.text = hospital.categoryName
+                tvHospitalName.text = hospital.nama
+                tvCategory.text = hospital.jenis
                 itemView.setOnClickListener {
-                    Toast.makeText(mcontext, hospital.hospitalName, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(mcontext, hospital.nama, Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -48,8 +48,8 @@ class HospitalListActivity : AppCompatActivity() {
                     for (key in snapshot.children){
                         val hospital = Hospital()
                         if (key.child("jenis").value.toString() == dataUser.categoryName){
-                            hospital.hospitalName = key.child("nama_rs").value.toString()
-                            hospital.categoryName = key.child("jenis").value.toString()
+                            hospital.nama = key.child("nama_rs").value.toString()
+                            hospital.jenis = key.child("jenis").value.toString()
                             list.add(hospital)
                         }
                     }

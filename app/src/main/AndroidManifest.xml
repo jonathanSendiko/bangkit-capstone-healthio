@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
 
-        <activity android:name=".ui.main.hospital.HospitalListActivity"></activity>
-        <activity android:name=".ui.main.hospital.MainActivity" />
-        <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" />
+        <activity android:name=".ui.main.hospital.HospitalListActivity" />
+<!--        <activity android:name=".ui.main.hospital.MainActivity" />-->
+<!--        <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" />-->
         <activity android:name=".ui.onboarding.OnboardingActivity" />
         <activity android:name=".ui.authentication.forgotpassword.ForgotPasswordActivity" />
         <activity android:name=".ui.authentication.signup.SignupActivity" />
         <activity android:name=".ui.authentication.login.LoginActivity" />
-        <activity android:name=".ui.splashscreen.SplashScreenActivity" />
-        <activity android:name=".ui.seeall.SeeallActivity">
+        <activity android:name=".ui.seeall.SeeallActivity" />
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.splashscreen.SplashScreenActivity" />
     </application>
 
 </manifest>
