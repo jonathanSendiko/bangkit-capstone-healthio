@@ -79,8 +79,11 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 //            binding.textNotifications.text = it
 //        })
         return binding.root
-    }
-
+//        binding.information.setOnClickListener(this)
+//
+//        return binding.AboutUActivity
+//
+}
     override fun onClick(v: View?) {
         when (v) {
             binding.btnLogout -> {

@@ -35,6 +35,7 @@
         <activity
             android:name=".ui.maps.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".ui.main.profile.AboutUsActivity"></activity>
         <activity android:name=".ui.main.hospital.HospitalListActivity" /> <!-- <activity android:name=".ui.main.hospital.MainActivity" /> -->
         <!-- <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" /> -->
         <activity android:name=".ui.onboarding.OnboardingActivity" />
@@ -42,7 +43,8 @@
         <activity android:name=".ui.authentication.signup.SignupActivity" />
         <activity android:name=".ui.authentication.login.LoginActivity" />
         <activity android:name=".ui.seeall.SeeallActivity" />
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.splashscreen.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

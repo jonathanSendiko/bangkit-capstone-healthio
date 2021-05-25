@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.panikga.healthio.data.local.entity.Hospital
-import com.panikga.healthio.databinding.ItemHospitalBinding
+import com.panikga.healthio.databinding.RowHospitalBinding
 
 class HospitalListAdapter(private val listHospital: ArrayList<Hospital>) : RecyclerView.Adapter<HospitalListAdapter.HospitalListHolder>() {
 
 
     private lateinit var mcontext: Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HospitalListHolder {
-        val binding = ItemHospitalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = RowHospitalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         mcontext = parent.context
         return HospitalListHolder(binding)
     }
@@ -24,11 +24,13 @@ class HospitalListAdapter(private val listHospital: ArrayList<Hospital>) : Recyc
 
     override fun getItemCount(): Int = listHospital.size
 
-    inner class HospitalListHolder(private val binding: ItemHospitalBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class HospitalListHolder(private val binding: RowHospitalBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(hospital: Hospital){
             with(binding){
-                tvHospitalName.text = hospital.nama
-                tvCategory.text = hospital.jenis
+                nama.text = hospital.nama
+                alamat.text = hospital.alamat
+                ratingAvg.text = hospital.rating_avg
+                ratingCount.text = hospital.rating_count
                 itemView.setOnClickListener {
                     Toast.makeText(mcontext, hospital.nama, Toast.LENGTH_SHORT).show()
                 }

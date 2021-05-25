@@ -49,6 +49,9 @@ class HospitalListActivity : AppCompatActivity() {
                         val hospital = Hospital()
                         if (key.child("jenis").value.toString() == dataUser.categoryName){
                             hospital.nama = key.child("nama_rs").value.toString()
+                            hospital.alamat = key.child("alamat").value.toString()
+                            hospital.rating_avg = key.child("rating_average").value.toString()
+                            hospital.rating_count = key.child("rating_count").value.toString()
                             hospital.jenis = key.child("jenis").value.toString()
                             list.add(hospital)
                         }

@@ -4,6 +4,7 @@ plugins {
     id 'com.google.gms.google-services'
     id 'kotlin-parcelize'
     id 'com.google.secrets_gradle_plugin' version '0.5'
+
 }
 def localProperties = new Properties()
 localProperties.load(new FileInputStream(rootProject.file("local.properties")))
