@@ -71,7 +71,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         }
 
         binding.personalInformation.setOnClickListener{
-            val intent = Intent(this@ProfileFragment.context, MapsActivity::class.java)
+            val intent = Intent(this@ProfileFragment.context, EditProfileActivity::class.java)
             startActivity(intent)
         }
         binding.btnLogout.setOnClickListener(this)
