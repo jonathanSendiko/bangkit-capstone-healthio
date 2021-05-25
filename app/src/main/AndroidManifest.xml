@@ -20,14 +20,14 @@
         <activity android:name=".ui.authentication.signup.SignupActivity" />
         <activity android:name=".ui.authentication.login.LoginActivity" />
         <activity android:name=".ui.seeall.SeeallActivity" />
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.splashscreen.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.splashscreen.SplashScreenActivity" />
     </application>
 
 </manifest>
