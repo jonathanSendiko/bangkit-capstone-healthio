@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.panikga.healthio.databinding.FragmentProfileBinding
 import com.panikga.healthio.ui.authentication.login.LoginActivity
+import com.panikga.healthio.ui.maps.MapsActivity
 import org.jetbrains.anko.noButton
 import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.yesButton
@@ -67,6 +68,11 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                         Toast.makeText(activity, "failed", Toast.LENGTH_SHORT).show()
                     }
                 })
+        }
+
+        binding.personalInformation.setOnClickListener{
+            val intent = Intent(this@ProfileFragment.context, MapsActivity::class.java)
+            startActivity(intent)
         }
         binding.btnLogout.setOnClickListener(this)
 //        profileViewModel.text.observe(viewLifecycleOwner, Observer {
