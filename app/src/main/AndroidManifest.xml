@@ -11,10 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
-
-        <activity android:name=".ui.main.hospital.HospitalListActivity" />
-<!--        <activity android:name=".ui.main.hospital.MainActivity" />-->
-<!--        <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" />-->
+        <activity android:name=".ui.main.profile.AboutUsActivity"></activity>
+        <activity android:name=".ui.main.hospital.HospitalListActivity" /> <!-- <activity android:name=".ui.main.hospital.MainActivity" /> -->
+        <!-- <activity android:name=".ui.main.profile.editprofile.EditProfileActivity" /> -->
         <activity android:name=".ui.onboarding.OnboardingActivity" />
         <activity android:name=".ui.authentication.forgotpassword.ForgotPasswordActivity" />
         <activity android:name=".ui.authentication.signup.SignupActivity" />
