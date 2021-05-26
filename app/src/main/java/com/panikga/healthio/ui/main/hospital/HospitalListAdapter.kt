@@ -5,12 +5,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.panikga.healthio.data.local.entity.Hospital
 import com.panikga.healthio.databinding.RowHospitalBinding
-import com.panikga.healthio.ui.main.doctor.DoctorListActivity
-import com.panikga.healthio.ui.main.profile.EditProfileActivity
+import com.panikga.healthio.ui.main.doctor.doctorlist.DoctorListActivity
+
 
 class HospitalListAdapter(private val listHospital: ArrayList<Hospital>) :
     RecyclerView.Adapter<HospitalListAdapter.HospitalListHolder>() {
@@ -39,8 +38,9 @@ class HospitalListAdapter(private val listHospital: ArrayList<Hospital>) :
                 ratingCount.text = hospital.rating_count
                 itemView.setOnClickListener {
                     Toast.makeText(mcontext, hospital.nama, Toast.LENGTH_SHORT).show()
-                    val intent = Intent(mcontext, DoctorListActivity::class.java)
-                    mcontext.startActivity(intent)
+                    val i = Intent(mcontext, DoctorListActivity::class.java)
+                    i.putExtra(DoctorListActivity.EXTRA_HOSPITALNAME, hospital.nama)
+                    mcontext.startActivity(i)
                 }
             }
         }
