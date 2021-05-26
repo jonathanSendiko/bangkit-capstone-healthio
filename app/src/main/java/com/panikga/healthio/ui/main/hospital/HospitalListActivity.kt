@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.panikga.healthio.data.local.entity.Category
 import com.panikga.healthio.data.local.entity.Hospital
-import com.panikga.healthio.data.local.entity.User
 import com.panikga.healthio.databinding.ActivityHospitalListBinding
 
 class HospitalListActivity : AppCompatActivity() {
@@ -14,7 +13,8 @@ class HospitalListActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_HOSPITAL = "extra_hospital"
     }
-    private lateinit var binding : ActivityHospitalListBinding
+
+    private lateinit var binding: ActivityHospitalListBinding
 
     private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var myRef: DatabaseReference = database.reference
@@ -37,17 +37,17 @@ class HospitalListActivity : AppCompatActivity() {
         binding.rvHospital.adapter = hospitalListAdapter
     }
 
-    private fun addFromFirebase(list: ArrayList<Hospital>){
+    private fun addFromFirebase(list: ArrayList<Hospital>) {
         val dataUser = intent.getParcelableExtra<Category>(EXTRA_HOSPITAL) as Category
 
         myRef.child("rumahsakit")
-            .addListenerForSingleValueEvent(object: ValueEventListener {
+            .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(error: DatabaseError) {}
                 override fun onDataChange(snapshot: DataSnapshot) {
                     list.clear()
-                    for (key in snapshot.children){
+                    for (key in snapshot.children) {
                         val hospital = Hospital()
-                        if (key.child("jenis").value.toString() == dataUser.categoryName){
+                        if (key.child("jenis").value.toString() == dataUser.categoryName) {
                             hospital.nama = key.child("nama_rs").value.toString()
                             hospital.alamat = key.child("alamat").value.toString()
                             hospital.rating_avg = key.child("rating_average").value.toString()

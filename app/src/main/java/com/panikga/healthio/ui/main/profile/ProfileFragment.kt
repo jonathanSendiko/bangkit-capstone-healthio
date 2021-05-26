@@ -70,22 +70,22 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                 })
         }
 
-        binding.personalInformation.setOnClickListener{
-            val intent = Intent(this@ProfileFragment.context, EditProfileActivity::class.java)
-            startActivity(intent)
-        }
+        binding.personalInformation.setOnClickListener(this)
+        binding.information.setOnClickListener(this)
         binding.btnLogout.setOnClickListener(this)
-//        profileViewModel.text.observe(viewLifecycleOwner, Observer {
-//            binding.textNotifications.text = it
-//        })
         return binding.root
-//        binding.information.setOnClickListener(this)
-//
-//        return binding.AboutUActivity
-//
-}
+    }
+
     override fun onClick(v: View?) {
         when (v) {
+            binding.personalInformation -> {
+                val intent = Intent(context, EditProfileActivity::class.java)
+                startActivity(intent)
+            }
+            binding.information -> {
+                val intent = Intent(context, AboutUsActivity::class.java)
+                startActivity(intent)
+            }
             binding.btnLogout -> {
                 alert("Are you sure want to logout?") {
                     noButton { }
