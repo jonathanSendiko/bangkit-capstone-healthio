@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.panikga.healthio.databinding.FragmentProfileBinding
 import com.panikga.healthio.ui.authentication.login.LoginActivity
+import com.panikga.healthio.ui.maps.MapsActivity
 import org.jetbrains.anko.noButton
 import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.yesButton
@@ -68,13 +69,21 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                     }
                 })
         }
+
+        binding.personalInformation.setOnClickListener{
+            val intent = Intent(this@ProfileFragment.context, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnLogout.setOnClickListener(this)
 //        profileViewModel.text.observe(viewLifecycleOwner, Observer {
 //            binding.textNotifications.text = it
 //        })
         return binding.root
-    }
-
+//        binding.information.setOnClickListener(this)
+//
+//        return binding.AboutUActivity
+//
+}
     override fun onClick(v: View?) {
         when (v) {
             binding.btnLogout -> {
