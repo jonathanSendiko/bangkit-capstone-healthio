@@ -18,7 +18,9 @@ import com.panikga.healthio.ui.main.home.HomeFragment
 import com.panikga.healthio.ui.main.profile.ProfileFragment
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import com.panikga.healthio.R
+import com.panikga.healthio.bpjsvsbukan.ImageClassifierActivity
 import com.panikga.healthio.databinding.ActivityMainBinding
+import com.panikga.healthio.ui.authentication.forgotpassword.ForgotPasswordActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -103,7 +105,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun fabClickedCallback(view: View) {
-        dispatchTakePictureIntent()
+        val intent = Intent(this@MainActivity, ImageClassifierActivity::class.java)
+        startActivity(intent)
+//        dispatchTakePictureIntent()
     }
 
 //    private fun processTextRecognitionResult(texts: Text) {
