@@ -74,6 +74,13 @@
                 android:fontFamily="@font/lato_light"
                 android:text="email"
                 android:textSize="14sp" />
+            <TextView
+                android:id="@+id/lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_light"
+                android:text="email"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
