@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.panikga.healthio.data.local.entity.Category
-import com.panikga.healthio.data.local.entity.Hospital
 import com.panikga.healthio.databinding.ItemCategoryBinding
 import com.panikga.healthio.ui.main.hospital.HospitalListActivity
 
@@ -35,13 +34,13 @@ class CategoryAdapter(private val listCategory: ArrayList<Category>) : RecyclerV
                     .load(category.categoryImage)
                     .into(categoryImage)
                 itemView.setOnClickListener{
-                    val dataHospital = Category(
+                    val dataCategory = Category(
                         category.categoryName,
                         category.categoryImage
                     )
                     Toast.makeText(mcontext, category.categoryName, Toast.LENGTH_SHORT).show()
                     val i = Intent(mcontext, HospitalListActivity::class.java)
-                    i.putExtra(HospitalListActivity.EXTRA_HOSPITAL, dataHospital)
+                    i.putExtra(HospitalListActivity.EXTRA_HOSPITAL, dataCategory)
                     mcontext.startActivity(i)
                 }
             }

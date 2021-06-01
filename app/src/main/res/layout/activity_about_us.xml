@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.profile.AboutUsActivity"
+    android:background="@drawable/profbackground">
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardView"
+            android:layout_width="338dp"
+            android:layout_height="535dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="75dp"
+
+            app:layout_constraintHorizontal_bias="0.350"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.320">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"><![CDATA[
+
+
+
+
+
+
+                app:layout_constraintTop_toBottomOf="@+id/tnctext" />
+
+
+
+
+
+
+
+
+
+                ]]>
+
+                <ImageView
+                    android:id="@+id/logo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="40dp"
+                    android:contentDescription="TOP ICON"
+                    app:layout_constraintBottom_toBottomOf="@+id/topView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/topView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_healthio" />
+
+                <ImageView
+                    android:id="@+id/icbackabt"
+                    android:layout_width="50dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="92dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tnctext"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.320"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/usersupview"
+                    android:layout_width="288dp"
+                    android:layout_height="341dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="37dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Healthio is a platform dedicated to create and allow patients to book appointments, orders, and treatments with hospitals.  Here, you can book your own appointment by checking the availability of every doctor in every hospital!. This platform is made for your convenience in a new and better hospital booking system that gives you and the doctors a more reliable and easy way to meet, check up, and enjoy the medical facilities even more!!
+\n\n
+Before you enjoy the best use of the app, please verify your id/KTP with the OCR feature on the top of the home page. Book your appointment now, by selecting your type of hospital services, choose the hospitals and doctors based on various options and select your date and time!!
+"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tnctext" />
+
+                <TextView
+                    android:id="@+id/tnctext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:text="About Us"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="50px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="749dp"
+        android:background="@drawable/profbackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

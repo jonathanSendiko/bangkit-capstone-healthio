@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bottomMenu() {
-        binding.navView.setOnItemSelectedListener(object : ChipNavigationBar.OnItemSelectedListener {
+        binding.navView.setOnItemSelectedListener(object :
+            ChipNavigationBar.OnItemSelectedListener {
             override fun onItemSelected(id: Int) {
                 var fragment: Fragment? = null
                 when (id) {
