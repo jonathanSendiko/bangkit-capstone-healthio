@@ -9,6 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.panikga.healthio.data.local.entity.Category
 import com.panikga.healthio.data.local.entity.Hospital
@@ -30,6 +34,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
     private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var myRef: DatabaseReference = database.reference
 
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -50,6 +58,34 @@ class HomeFragment : Fragment(), View.OnClickListener {
         showRecylerView()
 
         binding.seeAllHospital.setOnClickListener(this)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("110335627867-65vm2uji7qkcodh67l849k1912gtre61.apps.googleusercontent.com")
+            .requestEmail()
+            .build()
+        val acct = GoogleSignIn.getLastSignedInAccount(activity)
+
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+        auth = FirebaseAuth.getInstance()
+        if (acct != null) {
+            binding.name.text = acct.displayName
+        } else {
+            // Write a message to the database
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.reference
+            // Read from the database
+            myRef.child("Users")
+                .addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        binding.name.text =
+                            dataSnapshot.child("${FirebaseAuth.getInstance().currentUser!!.uid}/name").value.toString()
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        // Failed to read value
+                        Toast.makeText(activity, "failed", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        }
         return binding.root
     }
 

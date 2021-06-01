@@ -28,6 +28,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
+        <activity android:name=".ui.main.doctor.doctorappointment.DoctorAppointmentActivity"></activity>
         <activity android:name=".ui.main.doctor.doctordetail.DoctorDetailActivity" />
         <activity android:name=".ui.main.profile.EditProfileActivity" />
         <!--

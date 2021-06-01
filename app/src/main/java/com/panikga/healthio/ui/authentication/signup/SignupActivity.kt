@@ -18,11 +18,11 @@ import com.panikga.healthio.ui.authentication.login.LoginActivity
 
 class SignupActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var  binding: ActivitySignupBinding
+    private lateinit var binding: ActivitySignupBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
     private lateinit var awesomeValidation: AwesomeValidation
-    lateinit var ref : DatabaseReference
+    lateinit var ref: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,30 +54,29 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v){
+        when (v) {
             binding.btnSignup -> {
                 val email = binding.inputEmail.text.toString().trim()
                 val password = binding.inputPassword.text.toString().trim()
                 val repassword = binding.confirmPassword.text.toString().trim()
                 if (awesomeValidation.validate()) {
-                    if(email.isEmpty()){
+                    if (email.isEmpty()) {
                         binding.inputEmail.error = "Email is required, please fill in."
                         binding.inputEmail.requestFocus()
-                    }
-                    else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                         binding.inputEmail.error = "The e-mail address enter is invalid"
                         binding.inputEmail.requestFocus()
-                    }
-                    else if(password.isEmpty() || password.length < 8){
-                        binding.inputPassword.error = "Use at least 8 characters for your secure password"
+                    } else if (password.isEmpty() || password.length < 8) {
+                        binding.inputPassword.error =
+                            "Use at least 8 characters for your secure password"
                         binding.inputPassword.requestFocus()
-                    }
-                    else if(repassword.isEmpty() || repassword.length < 8){
-                        binding.confirmPassword.error = "Use at least 8 characters for your secure password"
+                    } else if (repassword.isEmpty() || repassword.length < 8) {
+                        binding.confirmPassword.error =
+                            "Use at least 8 characters for your secure password"
                         binding.confirmPassword.requestFocus()
-                    }
-                    else if(repassword!=password){
-                        binding.confirmPassword.error = "Password confirmation doesn\\'t match password, please try it again."
+                    } else if (repassword != password) {
+                        binding.confirmPassword.error =
+                            "Password confirmation doesn\\'t match password, please try it again."
                         binding.confirmPassword.requestFocus()
                     }
 
@@ -92,8 +91,8 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun registerUser(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){
-                if(it.isSuccessful){
+            .addOnCompleteListener(this) {
+                if (it.isSuccessful) {
                     database = FirebaseDatabase.getInstance()
                     ref = database.getReference("Users")
                     val name = binding.inputName.text.toString().trim()
@@ -109,7 +108,7 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     val intent = Intent(applicationContext, LoginActivity::class.java)
                     startActivity(intent)
-                }else{
+                } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }

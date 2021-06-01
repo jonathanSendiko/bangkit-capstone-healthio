@@ -28,6 +28,9 @@ class DoctorListActivity : AppCompatActivity() {
         binding.rvDoctor.setHasFixedSize(true)
         showRecyclerList()
         addFromFirebase(doctorList)
+        binding.arrow.setOnClickListener{
+            finish()
+        }
     }
 
     private fun showRecyclerList() {
@@ -57,6 +60,7 @@ class DoctorListActivity : AppCompatActivity() {
                             doctor.nama = doc.child("nama").value.toString()
                             doctor.photo = doc.child("photo").value.toString()
                             doctor.spesialisasi = doc.child("spesialisasi").value.toString()
+                            doctor.rumahsakit = hospitalName
                             list.add(doctor)
                         }
                     }

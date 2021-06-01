@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.panikga.healthio.data.local.entity.Category
 import com.panikga.healthio.data.local.entity.Doctor
 import com.panikga.healthio.databinding.ItemDoctorBinding
 import com.panikga.healthio.ui.main.doctor.doctordetail.DoctorDetailActivity
-import com.panikga.healthio.ui.main.hospital.HospitalListActivity
 
 class DoctorListAdapter(private val listDoctor: ArrayList<Doctor>) :
     RecyclerView.Adapter<DoctorListAdapter.DoctorListHolder>() {
@@ -37,6 +35,9 @@ class DoctorListAdapter(private val listDoctor: ArrayList<Doctor>) :
                 experience.text = doctor.jumlahpengalaman
                 tvName.text = doctor.nama
                 tvCategory.text = doctor.spesialisasi
+
+                patient.append("\nPatients")
+                experience.append(" years\nExperiences")
 //                Glide.with(mcontext)
 //                    .load("https://i.imgur.com/L32FF8u.png")
 //                    .into(ivPhotos)
@@ -46,7 +47,8 @@ class DoctorListAdapter(private val listDoctor: ArrayList<Doctor>) :
                         doctor.jumlahpengalaman,
                         doctor.nama,
                         doctor.photo,
-                        doctor.spesialisasi
+                        doctor.spesialisasi,
+                        doctor.rumahsakit
                     )
                     Toast.makeText(mcontext, doctor.nama, Toast.LENGTH_SHORT).show()
                     val i = Intent(mcontext, DoctorDetailActivity::class.java)

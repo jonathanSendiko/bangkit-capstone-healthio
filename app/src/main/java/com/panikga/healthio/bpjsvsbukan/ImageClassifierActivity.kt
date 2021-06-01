@@ -102,23 +102,28 @@ class ImageClassifierActivity : AppCompatActivity() {
         }
     }
 
-    private fun runImageValidation(image: Bitmap){
+    private fun runImageValidation(image: Bitmap) {
         val result = classifier.recognizeImage(image)
         val validity = result[0].title
-        if (validity == "bpjs"){
+        if (validity == "bpjs") {
             runOnUiThread { Toast.makeText(this, "Valid", Toast.LENGTH_SHORT).show() }
             val newBitmap = crop(image)
             imgView.setImageBitmap(newBitmap)
             runTextRecognition(newBitmap!!)
-        }
-        else{
+        } else {
             Toast.makeText(this, "foto tidak valid", Toast.LENGTH_SHORT).show()
             finish()
         }
     }
 
     private fun crop(originalBitmap: Bitmap): Bitmap? {
-        return Bitmap.createBitmap(originalBitmap, 0, (originalBitmap.height / 3), originalBitmap.width / 2, originalBitmap.height / 2)
+        return Bitmap.createBitmap(
+            originalBitmap,
+            0,
+            (originalBitmap.height / 3),
+            originalBitmap.width / 2,
+            originalBitmap.height / 2
+        )
     }
 
     private fun runTextRecognition(mSelectedImage: Bitmap) {

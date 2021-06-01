@@ -25,6 +25,10 @@ import com.panikga.healthio.ui.authentication.forgotpassword.ForgotPasswordActiv
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val EXTRA_ID = "extra_id"
+    }
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
