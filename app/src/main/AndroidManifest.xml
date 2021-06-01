@@ -28,7 +28,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthio">
-        <activity android:name=".ui.main.doctor.doctordetail.DoctorDetailActivity"></activity>
+        <activity android:name=".ui.main.doctor.doctordetail.DoctorDetailActivity" />
         <activity android:name=".ui.main.profile.EditProfileActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -55,7 +55,7 @@
         <activity android:name=".ui.authentication.login.LoginActivity" />
         <activity android:name=".ui.seeall.SeeallActivity" />
         <activity android:name=".bpjsvsbukan.ImageClassifierActivity" />
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.main.MainActivity"/>
         <activity android:name=".ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
