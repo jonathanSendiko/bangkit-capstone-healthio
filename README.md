@@ -36,9 +36,9 @@ Terdapat berbagai Activity yang dapat dilakukan pada aplikasi ini:
      <td>  </td>
   </tr>
   <tr>
-    <td><img src="screenshot/Offline Mode/1.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Offline Mode/2.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Offline Mode/3.jpg" width=270 height=480></td>
+    <td><img src="screenshot/Offline Mode/1.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Offline Mode/2.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Offline Mode/3.jpg" width=240 height=534></td>
   </tr>
  </table>
 Aplikasi dimulai dengan splash screen kemudian dilanjut dengan Onboarding Screen, kemudian disusul oleh getting started screen sambil melakukan pengecekan akan koneksi.
@@ -54,9 +54,9 @@ Jika device yang digunakan saat menggunakkan aplikasi tidak memiliki koneksi int
      <td>  </td>
   </tr>
   <tr>
-    <td><img src="screenshot/Authentication/1.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Authentication/2.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Authentication/3.jpg" width=270 height=480></td>
+    <td><img src="screenshot/Authentication/1.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Authentication/2.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Authentication/3.jpg" width=240 height=534></td>
   </tr>
  </table>
 Terdapat validation dalam form disertai dengan UX copywriting yang baik karena memberi tahu pengguna kesalahan apa yang dilakukan pengguna dan memberi tahu cara pengguna agar bisa keluar dari masalah yang sedang dihadapi. Pengguna yang sudah Sign In pun tidak perlu untuk melakukan Sign in ulang dalam aplikasi, sehingga membuat experience yang dirasakan pengguna lebih menyenangkan.
@@ -72,10 +72,9 @@ Terdapat validation dalam form disertai dengan UX copywriting yang baik karena m
      <td>  </td>
   </tr>
   <tr>
-    <td><img src="screenshot/Main Activity/1.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Main Activity//2.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Main Activity//3.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Main Activity//4.jpg" width=270 height=480></td>
+    <td><img src="screenshot/Main Activity/1.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Main Activity//2.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Main Activity//3.jpg" width=240 height=534></td>
     
   </tr>
  </table>
@@ -93,10 +92,10 @@ Terdapat validation dalam form disertai dengan UX copywriting yang baik karena m
      <td>  </td>
   </tr>
   <tr>
-    <td><img src="screenshot/Appointment/1.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Appointment/2.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Appointment/3.jpg" width=270 height=480></td>
-    <td><img src="screenshot/Appointment/4.jpg" width=270 height=480></td>
+    <td><img src="screenshot/Appointment/1.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Appointment/2.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Appointment/3.jpg" width=240 height=534></td>
+    <td><img src="screenshot/Appointment/4.jpg" width=240 height=534></td>
   </tr>
  </table>
  
