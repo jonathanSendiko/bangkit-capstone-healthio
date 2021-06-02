@@ -112,15 +112,7 @@
             android:fontFamily="@font/lato_bold"
             android:hint="ID Card Number"
             android:textSize="17sp" />
-        <EditText
-            android:id="@+id/editLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/lato_bold"
-            android:hint="Location"
-            android:textSize="17sp" />
+
         <Button
             android:id="@+id/save_changes"
             android:layout_width="match_parent"
