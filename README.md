@@ -6,23 +6,7 @@ Healthio is a platform dedicated to create and allow patients to book appointmen
 Before you enjoy the best use of the app, please verify your id/KTP with the OCR feature on the top of the home page. Book your appointment now, by selecting your type of hospital services, choose the hospitals and doctors based on various options and select your date and time!!
 
 <br>
-<br>
-Meal Rescue memberikan opsi untuk para masyarakat yang ingin mengurangi foodwaste untuk menjual makanan berlebih dengan harga yang lebih murah di Marketplace kami. Pengguna lain dapat membantu Bumi dengan membeli makanan berlebih tersebut sehingga tidak ada makanan yang terbuang sia-sia. Meal Rescue ini menjadi win-win solution untuk para pedagang dan juga para pembeli. 
-Bagaimana cara Meal Rescue bekerja?
-<br>
-•	Cari penjual makanan dan pesan melalui aplikasi.
-<br>
-•	Selamatkan makanan yang ada di toko pada waktu yang ditentukan.
-<br>
-•	Nikmati makanan sambil mengetahui bahwa Anda baru saja mengurangi food waste serta membantu Planet Bumi.
-Aplikasi ini ditujukan kepada siapapun yang ingin membantu mengurangi foodwaste dengan cara membeli makanan menggunakan aplikasi kami. Kami juga menujukan aplikasi kami kepada Online Food Order Services , seperti Grab dan Gojek untuk menjadi partnership kami sebagai sistem pengantaran kami.
-<br>
-<br>
-Meal Rescue merupakan sebuah aplikasi diciptakan atas dasar kekhawatiran tentang kondisi foodwaste yang ada di Indonesia. Menurut data dari Economist Intelligence Unit, Indonesia merupakan negara penghasil foodwaste terbesar kedua di Dunia dengan rata-rata 300 Kilogram makanan dibuang per orang setiap tahunnya.
-<br>
-<br>
-<br>
-Filosofi
+
 Terdapat berbagai Activity yang dapat dilakukan pada aplikasi ini:
 1. Offline Mode
 <table>
