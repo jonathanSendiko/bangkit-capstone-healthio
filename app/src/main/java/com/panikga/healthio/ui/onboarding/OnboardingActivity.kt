@@ -20,25 +20,37 @@ class OnboardingActivity : AppIntro() {
         supportActionBar?.hide()
         addSlide(
             AppIntroFragment.newInstance(
-                title = "Welcome...",
-                description = "This is the first slide of the example",
-                imageDrawable = R.drawable.ic_person,
-                titleColor = Color.YELLOW,
-                descriptionColor = getColor(R.color.blueaccent),
-                backgroundColor = Color.parseColor("#2EC4B6")
+                title = "Welcome to Healthio!",
+                description = "Taking care of your health has become\n" +
+                        "easier! Let's learn more about it!",
+                imageDrawable = R.drawable.ic_onboarding_1,
+                titleColor = Color.parseColor("#4D9AF5"),
+                descriptionColor = Color.parseColor("#333333"),
+                backgroundColor = Color.parseColor("#EFF4FE")
             )
         )
         addSlide(
             AppIntroFragment.newInstance(
-                title = "...Let's get started!",
-                description = "This is the last slide, I won't annoy you more :)",
-                imageDrawable = R.drawable.ic_healthio,
-                titleColor = Color.YELLOW,
-                descriptionColor = getColor(R.color.blue),
-                backgroundColor = Color.parseColor("#2EC4B6")
+                title = "Get Rid of Queues",
+                description = "Select a required specialist and make\n" +
+                        "an appointment through the application.",
+                imageDrawable = R.drawable.ic_onboarding_2,
+                titleColor = Color.parseColor("#4D9AF5"),
+                descriptionColor = Color.parseColor("#333333"),
+                backgroundColor = Color.parseColor("#EFF4FE")
             )
         )
-
+        addSlide(
+            AppIntroFragment.newInstance(
+                title = "Need any Emergencies?",
+                description = "We provide you the nearest hospital\n" +
+                        "based on your location.",
+                imageDrawable = R.drawable.ic_group_2591,
+                titleColor = Color.parseColor("#4D9AF5"),
+                descriptionColor = Color.parseColor("#333333"),
+                backgroundColor = Color.parseColor("#EFF4FE")
+            )
+        )
         setTransformer(AppIntroPageTransformerType.Fade)
     }
 
