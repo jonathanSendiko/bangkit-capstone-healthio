@@ -14,6 +14,7 @@ import androidx.core.content.FileProvider
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.panikga.healthio.R
+import com.panikga.healthio.ui.main.doctor.doctorlist.DoctorListActivity
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -150,6 +151,10 @@ class ImageClassifierActivity : AppCompatActivity() {
                     }
                 }
                 Log.d("hasil", "RS = $namaRs BPJS = $noBPJS Diagnosis = $diagnosis")
+//                namaRs = "RSUD AJIBARANG"
+                val i = Intent(this, DoctorListActivity::class.java)
+                i.putExtra(DoctorListActivity.EXTRA_HOSPITALNAME, namaRs)
+                startActivity(i)
                 // TODO: 6/1/2021 INTENT KE PESEN OTOMATIS
             }
             .addOnFailureListener { e -> // Task failed with an exception
